@@ -8,7 +8,7 @@ function playRound(playerSelection, computerSelection) {
     // Regex variables
     const ROCK = /^rock$/i; 
     const PAPER = /^paper$/i;
-    const SCISSORS = /^scissors/i;
+    const SCISSORS = /^scissors?/i;
     //Message variables
     const WIN = `You win! ${playerSelection} beats ${computerSelection}\n\n`;
     const LOSE = `You lose! ${computerSelection} beats ${playerSelection}\n\n`;
