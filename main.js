@@ -69,19 +69,19 @@ function game() {
         } 
     }
     if (playerScore > computerScore) {
-        console.log("Congratulations! You won!");
+        console.log("%c Congratulations! You won!", "background:gold; color:black; font-size: 20px; padding: 10px; border-style: outset;");
         console.table({
             Player: playerScore,
             Computer: computerScore
         });
     } else if (playerScore < computerScore) {
-        console.log("You lost! Try Again");
+        console.log("%c You lost! Try Again", "background:red; color:black; font-size: 20px; padding: 10px; border-style: outset;");
         console.table({
             Player: playerScore,
             Computer: computerScore
         });
     } else {
-        console.log("It's a tie");
+        console.log("%c It's a tie", "background:white; color:black; font-size: 20px; padding: 10px; border-style: outset;");
     }
 }
 game();
