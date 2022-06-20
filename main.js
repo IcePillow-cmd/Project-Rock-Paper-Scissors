@@ -38,3 +38,24 @@ function playRound(playerSelection, computerSelection) {
         return `${playerSelection} is not a valid input`
     }
 } 
+
+
+// --> To check the function return value you should omit the same argument
+// let player = "rock";
+// let computer = computerPlay();
+// console.log(player);
+// console.log(computer);
+// console.log(playRound(player, computer))
+
+// if (playRound(player, computer) == "No one wins, No one loses") {
+//     alert("yes");
+// }
+
+
+// --> You can store function with arguments in a variable
+// function add(num1, num2) {
+//     return num1 + num2;
+// }
+
+// let test = add(1,2);
+// console.log(test);
