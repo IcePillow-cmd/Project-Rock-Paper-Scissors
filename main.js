@@ -8,39 +8,42 @@ function playRound(playerSelection, computerSelection) {
     const rock = /^rock$/i; 
     const paper = /^paper$/i;
     const scissors = /^scissors/i;
+    const WIN = `You win! ${playerSelection} beats ${computerSelection}\n\n`;
+    const LOSE = `You lose! ${computerSelection} beats ${playerSelection}\n\n`;
+    const TIE = `You and Computer both chose ${playerSelection}, It's a Tie\n\n`;
 
     if (rock.test(playerSelection)) {
         if (computerSelection === "Scissors") {
-            console.log( `You win! ${playerSelection} beats ${computerSelection}`);
+            console.log(WIN);
             return "+1 for player"
         }
         else if (computerSelection === "Paper") {
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+            console.log(LOSE);
             return "+1 for computer"
         } else {
-            console.log( "No one wins, No one loses");
+            console.log(TIE);
             return "Tie"
         }
     } else if (paper.test(playerSelection)) {
         if (computerSelection === "Rock") {
-            console.log( `You win! ${playerSelection} beats ${computerSelection}`);
+            console.log(WIN);
             return "+1 for player"
         } else if (computerSelection === "Scissors") {
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+            console.log(LOSE);
             return "+1 for computer"
         } else {
-            console.log( "No one wins, No one loses");
+            console.log(TIE);
             return "Tie"
         }
     } else if (scissors.test(playerSelection)) {
         if (computerSelection === "Paper") {
-            console.log( `You win! ${playerSelection} beats ${computerSelection}`);
+            console.log(WIN);
             return "+1 for player"
         } else if (computerSelection === "Rock") {
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+            console.log(LOSE);
             return "+1 for computer"
         } else {
-            console.log( "No one wins, No one loses");
+            console.log(TIE);
             return "Tie"
         }
     } else {
