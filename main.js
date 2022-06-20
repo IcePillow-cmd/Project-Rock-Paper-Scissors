@@ -39,6 +39,17 @@ function playRound(playerSelection, computerSelection) {
     }
 } 
 
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let userInput = prompt("Rock, Paper or Scissors?");
+        let computerInput = computerPlay();
+        alert(playRound(userInput, computerInput));
+        console.log(playRound(userInput, computerInput));
+    }
+}
+
+game();
+
 
 // --> To check the function return value you should omit the same argument
 // let player = "rock";
