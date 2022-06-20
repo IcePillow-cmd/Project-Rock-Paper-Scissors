@@ -5,14 +5,14 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    const rock = /^rock$/i; 
-    const paper = /^paper$/i;
-    const scissors = /^scissors/i;
+    const ROCK = /^rock$/i; 
+    const PAPER = /^paper$/i;
+    const SCISSORS = /^scissors/i;
     const WIN = `You win! ${playerSelection} beats ${computerSelection}\n\n`;
     const LOSE = `You lose! ${computerSelection} beats ${playerSelection}\n\n`;
     const TIE = `You and Computer both chose ${playerSelection}, It's a Tie\n\n`;
 
-    if (rock.test(playerSelection)) {
+    if (ROCK.test(playerSelection)) {
         if (computerSelection === "Scissors") {
             console.log(WIN);
             return "+1 for player"
@@ -24,7 +24,7 @@ function playRound(playerSelection, computerSelection) {
             console.log(TIE);
             return "Tie"
         }
-    } else if (paper.test(playerSelection)) {
+    } else if (PAPER.test(playerSelection)) {
         if (computerSelection === "Rock") {
             console.log(WIN);
             return "+1 for player"
@@ -35,7 +35,7 @@ function playRound(playerSelection, computerSelection) {
             console.log(TIE);
             return "Tie"
         }
-    } else if (scissors.test(playerSelection)) {
+    } else if (SCISSORS.test(playerSelection)) {
         if (computerSelection === "Paper") {
             console.log(WIN);
             return "+1 for player"
