@@ -60,12 +60,8 @@ function game() {
 
         if (round.includes("player")) {
             ++playerScore;
-            console.log(`Player: ${playerScore}`);
-            console.log(`Computer: ${computerScore}\n\n`);
         } else if (round.includes("computer")) {
             ++computerScore;
-            console.log(`Player: ${playerScore}`);
-            console.log(`Computer: ${computerScore}\n\n`);
         } 
     }
     if (playerScore > computerScore) {
