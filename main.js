@@ -91,6 +91,7 @@ function game() {
     }
 }
 game();
+alert("Check the console in case it's still not to see the summary of the game")
 
 
 // --> To check the function return value you should omit the same argument
