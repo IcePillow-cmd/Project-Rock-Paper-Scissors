@@ -50,13 +50,25 @@ function playRound(playerSelection, computerSelection) {
 } 
 
 function game() {
+    let playerScore = 0;
+    let computerScore = 0;
     for (let i = 0; i < 5; i++) {
         let userInput = prompt("Rock, Paper or Scissors?");
         let computerInput = computerPlay();
-        alert(playRound(userInput, computerInput));
+        let round = playRound(userInput, computerInput);
+        alert(round);
+
+        if (round.includes("player")) {
+            ++playerScore;
+            console.log(`Player: ${playerScore}`);
+            console.log(`Computer: ${computerScore}\n\n`);
+        } else if (round.includes("computer")) {
+            ++computerScore;
+            console.log(`Player: ${playerScore}`);
+            console.log(`Computer: ${computerScore}\n\n`);
+        } 
     }
 }
-
 game();
 
 
