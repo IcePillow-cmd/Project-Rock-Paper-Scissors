@@ -12,30 +12,40 @@ function playRound(playerSelection, computerSelection) {
     if (rock.test(playerSelection)) {
         if (computerSelection === "Scissors") {
             console.log( `You win! ${playerSelection} beats ${computerSelection}`);
+            return "+1 for player"
         }
         else if (computerSelection === "Paper") {
             console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+            return "+1 for computer"
         } else {
             console.log( "No one wins, No one loses");
+            return "Tie"
         }
     } else if (paper.test(playerSelection)) {
         if (computerSelection === "Rock") {
             console.log( `You win! ${playerSelection} beats ${computerSelection}`);
+            return "+1 for player"
         } else if (computerSelection === "Scissors") {
             console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+            return "+1 for computer"
         } else {
             console.log( "No one wins, No one loses");
+            return "Tie"
         }
     } else if (scissors.test(playerSelection)) {
         if (computerSelection === "Paper") {
             console.log( `You win! ${playerSelection} beats ${computerSelection}`);
+            return "+1 for player"
         } else if (computerSelection === "Rock") {
             console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+            return "+1 for computer"
         } else {
             console.log( "No one wins, No one loses");
+            return "Tie"
         }
     } else {
-        return `${playerSelection} is not a valid input`
+        console.log(`${playerSelection} is not a valid input`);
+        return `${playerSelection} is not a valid input`;
     }
 } 
 
