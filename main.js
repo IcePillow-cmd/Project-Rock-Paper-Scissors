@@ -5,7 +5,7 @@ for (const playerBtn of playerBtnArr){
     playerBtn.addEventListener("click", () => {
         const playerSelection = playerBtn.getAttribute("data-selection");
         const computerSelection = computerPlay();
-        playRound(playerSelection, computerSelection);
+        const roundResult = playRound(playerSelection, computerSelection);
     })
 }
 
