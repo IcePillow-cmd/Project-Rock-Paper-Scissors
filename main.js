@@ -27,36 +27,36 @@ function playRound(playerSelection, computerSelection) {
     if (ROCK.test(playerSelection)) {
         if (computerSelection === "Scissors") {
             console.log(WIN);
-            return "+1 for player"
+            return "player"
         }
         else if (computerSelection === "Paper") {
             console.log(LOSE);
-            return "+1 for computer"
+            return "computer"
         } else {
             console.log(TIE);
-            return "Tie"
+            return "tie"
         }
     } else if (PAPER.test(playerSelection)) {
         if (computerSelection === "Rock") {
             console.log(WIN);
-            return "+1 for player"
+            return "player"
         } else if (computerSelection === "Scissors") {
             console.log(LOSE);
-            return "+1 for computer"
+            return "computer"
         } else {
             console.log(TIE);
-            return "Tie"
+            return "tie"
         }
     } else if (SCISSORS.test(playerSelection)) {
         if (computerSelection === "Paper") {
             console.log(WIN);
-            return "+1 for player"
+            return "player"
         } else if (computerSelection === "Rock") {
             console.log(LOSE);
-            return "+1 for computer"
+            return "computer"
         } else {
             console.log(TIE);
-            return "Tie"
+            return "tie"
         }
     } else {
         console.log(`${playerSelection} is not a valid input`);
