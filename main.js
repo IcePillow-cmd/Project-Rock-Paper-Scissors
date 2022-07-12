@@ -85,6 +85,4 @@ function game() {
         console.log("%c It's a tie", "background:white; color:black; font-size: 20px; padding: 10px; border-style: outset;");
     }
 }
-game();
-alert("Check the console in case it's still not to see the summary of the game")
 
