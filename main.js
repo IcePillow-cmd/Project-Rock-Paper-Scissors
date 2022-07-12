@@ -1,6 +1,14 @@
 const playerBtns = document.querySelectorAll(".selection-btn");
 const playerBtnArr = [...playerBtns];
 
+for (const playerBtn of playerBtnArr){
+    playerBtn.addEventListener("click", () => {
+        const playerSelection = playerBtn.getAttribute("data-selection");
+        const computerSelection = computerPlay();
+        playRound(playerSelection, computerSelection);
+    })
+}
+
 function computerPlay() {
     const CHOICE = ["Rock", "Paper", "Scissors"];
     return CHOICE[Math.floor(Math.random() * CHOICE.length)];
