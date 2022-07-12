@@ -58,9 +58,6 @@ function playRound(playerSelection, computerSelection) {
             console.log(TIE);
             return "tie"
         }
-    } else {
-        console.log(`${playerSelection} is not a valid input`);
-        return `${playerSelection} is not a valid input`;
     }
 } 
 
