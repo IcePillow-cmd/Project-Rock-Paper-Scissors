@@ -55,13 +55,10 @@ function playRound(playerSelection, computerSelection) {
 } 
 
 function game() {
-    // Score variables are outside to prevent re-initialization
     let playerScore = 0;
     let computerScore = 0;
-    // getting input from user and ocmputer
     let userInput = prompt("Rock, Paper or Scissors?");
     let computerInput = computerPlay();
-    // to show message in console
     let round = playRound(userInput, computerInput);
     alert(round);
 
