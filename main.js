@@ -1,3 +1,5 @@
+const playerBtns = document.querySelectorAll(".selection-btn");
+const playerBtnArr = [...playerBtns];
 
 function computerPlay() {
     const CHOICE = ["Rock", "Paper", "Scissors"];
