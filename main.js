@@ -1,6 +1,7 @@
 const playerBtns = document.querySelectorAll(".selection-btn");
 const playerBtnArr = [...playerBtns];
 const resultsCon = document.querySelector("#results-con");
+const resultPara = document.querySelector("#result-para");
 
 for (const playerBtn of playerBtnArr){
     playerBtn.addEventListener("click", () => {
