@@ -63,7 +63,6 @@ function game() {
     let userInput = prompt("Rock, Paper or Scissors?");
     let computerInput = computerPlay();
     // to show message in console
-    console.log(`Round ${i}:\n`)
     let round = playRound(userInput, computerInput);
     alert(round);
 
