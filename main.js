@@ -59,21 +59,19 @@ function game() {
     // Score variables are outside to prevent re-initialization
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        // getting input from user and ocmputer
-        let userInput = prompt("Rock, Paper or Scissors?");
-        let computerInput = computerPlay();
-        // to show message in console
-        console.log(`Round ${i}:\n`)
-        let round = playRound(userInput, computerInput);
-        alert(round);
+    // getting input from user and ocmputer
+    let userInput = prompt("Rock, Paper or Scissors?");
+    let computerInput = computerPlay();
+    // to show message in console
+    console.log(`Round ${i}:\n`)
+    let round = playRound(userInput, computerInput);
+    alert(round);
 
-        if (round.includes("player")) {
-            ++playerScore;
-        } else if (round.includes("computer")) {
-            ++computerScore;
-        } 
-    }
+    if (round.includes("player")) {
+        ++playerScore;
+    } else if (round.includes("computer")) {
+        ++computerScore;
+    } 
     if (playerScore > computerScore) {
         console.log("%c Congratulations! You won!", "background:gold; color:black; font-size: 20px; padding: 10px; border-style: outset;");
         console.table({
