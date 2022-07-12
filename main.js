@@ -29,44 +29,35 @@ function playRound(playerSelection, computerSelection) {
     if (ROCK.test(playerSelection)) {
         if (computerSelection === "Scissors") {
             resultPara.textContent = winResult;
-            resultsCon.appendChild(resultPara);
             return "player"
         }
         else if (computerSelection === "Paper") {
             resultPara.textContent = loseResult;
-            resultsCon.appendChild(resultPara);
             return "computer"
         } else {
             resultPara.textContent = tieResult;
-            resultsCon.appendChild(resultPara);
             return "tie"
         }
     } else if (PAPER.test(playerSelection)) {
         if (computerSelection === "Rock") {
             resultPara.textContent = winResult;
-            resultsCon.appendChild(resultPara);
             return "player"
         } else if (computerSelection === "Scissors") {
             resultPara.textContent = loseResult;
-            resultsCon.appendChild(resultPara);
             return "computer"
         } else {
             resultPara.textContent = tieResult;
-            resultsCon.appendChild(resultPara);
             return "tie"
         }
     } else if (SCISSORS.test(playerSelection)) {
         if (computerSelection === "Paper") {
             resultPara.textContent = winResult;
-            resultsCon.appendChild(resultPara);
             return "player"
         } else if (computerSelection === "Rock") {
             resultPara.textContent = loseResult;
-            resultsCon.appendChild(resultPara);
             return "computer"
         } else {
             resultPara.textContent = tieResult;
-            resultsCon.appendChild(resultPara);
             return "tie"
         }
     }
