@@ -21,9 +21,9 @@ function playRound(playerSelection, computerSelection) {
     const PAPER = /^paper$/i;
     const SCISSORS = /^scissors?/i;
 
-    const WIN = `You win! ${playerSelection} beats ${computerSelection}\n\n`;
-    const LOSE = `You lose! ${computerSelection} beats ${playerSelection}\n\n`;
-    const TIE = `You and Computer both chose ${playerSelection}, It's a Tie\n\n`;
+    const winResult = `You win! ${playerSelection} beats ${computerSelection}\n\n`;
+    const loseResult = `You lose! ${computerSelection} beats ${playerSelection}\n\n`;
+    const tieResult = `You and Computer both chose ${playerSelection}, It's a Tie\n\n`;
 
     if (ROCK.test(playerSelection)) {
         if (computerSelection === "Scissors") {
