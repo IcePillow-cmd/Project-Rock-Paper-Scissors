@@ -10,6 +10,7 @@ for (const playerBtn of playerBtnArr){
         const playerSelection = playerBtn.getAttribute("data-selection");
         const computerSelection = computerPlay();
         const roundResult = playRound(playerSelection, computerSelection);
+        changeScore(roundResult);
     })
 }
 
