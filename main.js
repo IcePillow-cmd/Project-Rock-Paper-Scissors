@@ -6,54 +6,10 @@ const playerScore = document.querySelector("#player-score");
 const computerScore = document.querySelector("#computer-score");
 const roundTracker = document.querySelector("#round-tracker");
 
-for (const playerBtn of playerBtnArr){
-    playerBtn.addEventListener("click", () => {
-        let playerNum = parseInt(playerScore.textContent);
-        let computerNum = parseInt(computerScore.textContent);
-        const gameEnd = checkGame(playerNum, computerNum);
-        if (gameEnd) {
-            return
-        }
-        const playerSelection = playerBtn.getAttribute("data-selection");
-        const computerSelection = computerPlay();
-        const roundResult = playRound(playerSelection, computerSelection);
-        updateScore(roundResult, playerNum, computerNum);
-        updateRound();
-    })
-}
-
 function capitalizeStr(string) {
     const firstCaps = string[0].toUpperCase();
     const restLower = string.slice(1).toLowerCase();
     return firstCaps + restLower;
-}
-
-function updateScore(roundResult, playerNum, computerNum) {
-    if (roundResult === "tie") {
-        return
-    } else if (roundResult === "player") {
-        playerNum++
-        playerScore.textContent = playerNum;
-    } else if (roundResult === "computer") {
-        computerNum++
-        computerScore.textContent = computerNum;
-    }
-}
-
-function checkGame(playerNum, computerNum) {
-    if (playerNum >= 5) {
-        alert("You win");
-        return true
-    } else if (computerNum >= 5) {
-        alert("You lose");
-        return true
-    }
-    return false
-}
-
-function updateRound() {
-    let roundNum = parseInt(roundTracker.textContent);
-    roundTracker.textContent = ++roundNum;
 }
 
 function computerPlay() {
@@ -105,5 +61,46 @@ function playRound(playerSelection, computerSelection) {
     }
 } 
 
+function updateScore(roundResult, playerNum, computerNum) {
+    if (roundResult === "tie") {
+        return
+    } else if (roundResult === "player") {
+        playerNum++
+        playerScore.textContent = playerNum;
+    } else if (roundResult === "computer") {
+        computerNum++
+        computerScore.textContent = computerNum;
+    }
+}
 
+function updateRound() {
+    let roundNum = parseInt(roundTracker.textContent);
+    roundTracker.textContent = ++roundNum;
+}
 
+function checkGame(playerNum, computerNum) {
+    if (playerNum >= 5) {
+        alert("You win");
+        return true
+    } else if (computerNum >= 5) {
+        alert("You lose");
+        return true
+    }
+    return false
+}
+
+for (const playerBtn of playerBtnArr){
+    playerBtn.addEventListener("click", () => {
+        let playerNum = parseInt(playerScore.textContent);
+        let computerNum = parseInt(computerScore.textContent);
+        const gameEnd = checkGame(playerNum, computerNum);
+        if (gameEnd) {
+            return
+        }
+        const playerSelection = playerBtn.getAttribute("data-selection");
+        const computerSelection = computerPlay();
+        const roundResult = playRound(playerSelection, computerSelection);
+        updateScore(roundResult, playerNum, computerNum);
+        updateRound();
+    })
+}
