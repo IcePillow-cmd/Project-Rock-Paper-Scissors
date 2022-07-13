@@ -64,9 +64,9 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     const playerStr = capitalizeStr(playerSelection);
 
-    const winResult = `You win! ${playerSelection} beats ${computerSelection}\n\n`;
-    const loseResult = `You lose! ${computerSelection} beats ${playerSelection}\n\n`;
-    const tieResult = `You and Computer both chose ${playerSelection}, It's a Tie\n\n`;
+    const winResult = `You win! ${playerStr} beats ${computerSelection}\n\n`;
+    const loseResult = `You lose! ${computerSelection} beats ${playerStr}\n\n`;
+    const tieResult = `You and Computer both chose ${playerStr}, It's a Tie\n\n`;
 
     if (playerStr === "Rock") {
         if (computerSelection === "Scissors") {
