@@ -4,6 +4,7 @@ const resultsCon = document.querySelector("#results-con");
 const resultPara = document.querySelector("#result-para");
 const playerScore = document.querySelector("#player-score");
 const computerScore = document.querySelector("#computer-score");
+const roundTracker = document.querySelector("#round-tracker");
 
 for (const playerBtn of playerBtnArr){
     playerBtn.addEventListener("click", () => {
