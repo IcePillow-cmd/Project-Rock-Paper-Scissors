@@ -13,6 +13,21 @@ for (const playerBtn of playerBtnArr){
     })
 }
 
+function changeScore(roundResult) {
+    let playerNum = parseInt(playerScore.textContent);
+    let computerNum = parseInt(computerScore.textContent);
+
+    if (roundResult === "tie") {
+        return
+    } else if (roundResult === "player") {
+        playerNum++
+        playerScore.textContent = playerNum;
+    } else if (roundResult === "computer") {
+        computerNum++
+        computerScore.textContent = computerNum;
+    }
+}
+
 function computerPlay() {
     const CHOICE = ["Rock", "Paper", "Scissors"];
     return CHOICE[Math.floor(Math.random() * CHOICE.length)];
