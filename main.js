@@ -7,16 +7,16 @@ const computerScore = document.querySelector("#computer-score");
 
 for (const playerBtn of playerBtnArr){
     playerBtn.addEventListener("click", () => {
+        let playerNum = parseInt(playerScore.textContent);
+        let computerNum = parseInt(computerScore.textContent);
         const playerSelection = playerBtn.getAttribute("data-selection");
         const computerSelection = computerPlay();
         const roundResult = playRound(playerSelection, computerSelection);
-        changeScore(roundResult);
+        changeScore(roundResult, playerNum, computerNum);
     })
 }
 
-function changeScore(roundResult) {
-    let playerNum = parseInt(playerScore.textContent);
-    let computerNum = parseInt(computerScore.textContent);
+function changeScore(roundResult, playerNum, computerNum) {
 
     if (roundResult === "tie") {
         return
