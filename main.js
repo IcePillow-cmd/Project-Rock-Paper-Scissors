@@ -17,7 +17,6 @@ for (const playerBtn of playerBtnArr){
 }
 
 function changeScore(roundResult, playerNum, computerNum) {
-
     if (roundResult === "tie") {
         return
     } else if (roundResult === "player") {
@@ -27,6 +26,17 @@ function changeScore(roundResult, playerNum, computerNum) {
         computerNum++
         computerScore.textContent = computerNum;
     }
+}
+
+function checkGame(playerNum, computerNum) {
+    if (playerNum >= 5) {
+        alert("You win");
+        return true
+    } else if (computerNum >= 5) {
+        alert("You lose");
+        return true
+    }
+    return false
 }
 
 function computerPlay() {
