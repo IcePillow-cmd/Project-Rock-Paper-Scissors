@@ -18,6 +18,7 @@ for (const playerBtn of playerBtnArr){
         const computerSelection = computerPlay();
         const roundResult = playRound(playerSelection, computerSelection);
         updateScore(roundResult, playerNum, computerNum);
+        updateRound();
     })
 }
 
