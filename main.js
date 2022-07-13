@@ -17,11 +17,11 @@ for (const playerBtn of playerBtnArr){
         const playerSelection = playerBtn.getAttribute("data-selection");
         const computerSelection = computerPlay();
         const roundResult = playRound(playerSelection, computerSelection);
-        changeScore(roundResult, playerNum, computerNum);
+        updateScore(roundResult, playerNum, computerNum);
     })
 }
 
-function changeScore(roundResult, playerNum, computerNum) {
+function updateScore(roundResult, playerNum, computerNum) {
     if (roundResult === "tie") {
         return
     } else if (roundResult === "player") {
