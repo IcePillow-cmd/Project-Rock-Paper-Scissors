@@ -9,6 +9,10 @@ for (const playerBtn of playerBtnArr){
     playerBtn.addEventListener("click", () => {
         let playerNum = parseInt(playerScore.textContent);
         let computerNum = parseInt(computerScore.textContent);
+        const gameEnd = checkGame(playerNum, computerNum);
+        if (gameEnd) {
+            return
+        }
         const playerSelection = playerBtn.getAttribute("data-selection");
         const computerSelection = computerPlay();
         const roundResult = playRound(playerSelection, computerSelection);
