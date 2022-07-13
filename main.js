@@ -44,6 +44,11 @@ function checkGame(playerNum, computerNum) {
     return false
 }
 
+function updateRound() {
+    let roundNum = parseInt(roundTracker.textContent);
+    roundTracker.textContent = ++roundNum;
+}
+
 function computerPlay() {
     const CHOICE = ["Rock", "Paper", "Scissors"];
     return CHOICE[Math.floor(Math.random() * CHOICE.length)];
