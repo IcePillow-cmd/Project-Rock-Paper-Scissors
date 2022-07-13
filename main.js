@@ -22,6 +22,12 @@ for (const playerBtn of playerBtnArr){
     })
 }
 
+function capitalizeStr(string) {
+    const firstCaps = string[0].toUpperCase();
+    const restLower = string.slice(1).toLowerCase();
+    return firstCaps + restLower;
+}
+
 function updateScore(roundResult, playerNum, computerNum) {
     if (roundResult === "tie") {
         return
