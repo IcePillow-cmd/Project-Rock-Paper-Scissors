@@ -62,16 +62,13 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-
-    const ROCK = /^rock$/i; 
-    const PAPER = /^paper$/i;
-    const SCISSORS = /^scissors?/i;
+    const playerStr = capitalizeStr(playerSelection);
 
     const winResult = `You win! ${playerSelection} beats ${computerSelection}\n\n`;
     const loseResult = `You lose! ${computerSelection} beats ${playerSelection}\n\n`;
     const tieResult = `You and Computer both chose ${playerSelection}, It's a Tie\n\n`;
 
-    if (ROCK.test(playerSelection)) {
+    if (playerStr === "Rock") {
         if (computerSelection === "Scissors") {
             resultPara.textContent = winResult;
             return "player"
@@ -83,7 +80,7 @@ function playRound(playerSelection, computerSelection) {
             resultPara.textContent = tieResult;
             return "tie"
         }
-    } else if (PAPER.test(playerSelection)) {
+    } else if (playerStr === "Paper") {
         if (computerSelection === "Rock") {
             resultPara.textContent = winResult;
             return "player"
@@ -94,7 +91,7 @@ function playRound(playerSelection, computerSelection) {
             resultPara.textContent = tieResult;
             return "tie"
         }
-    } else if (SCISSORS.test(playerSelection)) {
+    } else if (playerStr === "Scissors") {
         if (computerSelection === "Paper") {
             resultPara.textContent = winResult;
             return "player"
