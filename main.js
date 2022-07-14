@@ -1,6 +1,6 @@
 const playerBtns = document.querySelectorAll(".selection-btn");
 const playerBtnArr = [...playerBtns];
-const resultPara = document.querySelector("#round-response");
+const roundResponse = document.querySelector("#round-response");
 const playerScore = document.querySelector("#player-score");
 const computerScore = document.querySelector("#computer-score");
 const roundTracker = document.querySelector("#round-tracker");
@@ -25,36 +25,36 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerStr === "Rock") {
         if (computerSelection === "Scissors") {
-            resultPara.textContent = winResult;
+            roundResponse.textContent = winResult;
             return "player"
         }
         else if (computerSelection === "Paper") {
-            resultPara.textContent = loseResult;
+            roundResponse.textContent = loseResult;
             return "computer"
         } else {
-            resultPara.textContent = tieResult;
+            roundResponse.textContent = tieResult;
             return "tie"
         }
     } else if (playerStr === "Paper") {
         if (computerSelection === "Rock") {
-            resultPara.textContent = winResult;
+            roundResponse.textContent = winResult;
             return "player"
         } else if (computerSelection === "Scissors") {
-            resultPara.textContent = loseResult;
+            roundResponse.textContent = loseResult;
             return "computer"
         } else {
-            resultPara.textContent = tieResult;
+            roundResponse.textContent = tieResult;
             return "tie"
         }
     } else if (playerStr === "Scissors") {
         if (computerSelection === "Paper") {
-            resultPara.textContent = winResult;
+            roundResponse.textContent = winResult;
             return "player"
         } else if (computerSelection === "Rock") {
-            resultPara.textContent = loseResult;
+            roundResponse.textContent = loseResult;
             return "computer"
         } else {
-            resultPara.textContent = tieResult;
+            roundResponse.textContent = tieResult;
             return "tie"
         }
     }
