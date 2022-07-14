@@ -1,6 +1,5 @@
 const playerBtns = document.querySelectorAll(".selection-btn");
 const playerBtnArr = [...playerBtns];
-const resultsCon = document.querySelector("#results-con");
 const resultPara = document.querySelector("#result-para");
 const playerScore = document.querySelector("#player-score");
 const computerScore = document.querySelector("#computer-score");
