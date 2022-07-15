@@ -13,3 +13,9 @@ body {
     flex-flow:row wrap;
     justify-content: space-around;
 }
+
+#selection-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
