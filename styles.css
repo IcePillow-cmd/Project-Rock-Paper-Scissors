@@ -19,3 +19,10 @@ body {
     flex-flow: row wrap;
     justify-content: center;
 }
+
+#response-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
