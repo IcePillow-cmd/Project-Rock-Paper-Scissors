@@ -26,6 +26,11 @@ body {
     text-transform: capitalize;
 }
 
+#header-headings,
+#header-para {
+    margin: 0;
+}
+
 #status-section {
     display: flex;
     flex-flow:row wrap;
