@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
+    gap: 15px;
 }
 
 #header-headings {
