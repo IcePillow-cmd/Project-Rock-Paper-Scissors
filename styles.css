@@ -47,6 +47,7 @@ body {
     align-items: center;
     font-family: var(--gugi-fam);
     font-size: 30px;
+    padding: 10px;
 }
 
 .profile-picture {
