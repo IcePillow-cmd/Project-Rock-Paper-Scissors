@@ -40,6 +40,17 @@ body {
     align-items: center;
 }
 
+.profile-status {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    max-width: 150px;
+}
+
 #selection-section {
     display: flex;
     flex-flow: row wrap;
@@ -51,8 +62,4 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-}
-
-.profile-picture {
-    max-width: 150px;
 }
