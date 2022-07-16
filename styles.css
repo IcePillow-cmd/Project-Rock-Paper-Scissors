@@ -62,6 +62,11 @@ body {
     border-bottom: 2px solid black;
 }
 
+#player-score,
+#computer-score {
+    margin: 0 0 10px 0;
+}
+
 #selection-section {
     display: flex;
     flex-flow: row wrap;
