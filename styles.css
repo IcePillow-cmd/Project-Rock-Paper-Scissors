@@ -1,3 +1,9 @@
+:root {
+    --bungee-fam: 'Bungee', cursive;
+    --gugi-fam: 'Gugi', cursive;
+    --roboto-fam: 'Roboto', sans-serif;
+}
+
 body {
     margin: 0;
 }
