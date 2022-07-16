@@ -45,6 +45,8 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    font-family: var(--gugi-fam);
+    font-size: 30px;
 }
 
 .profile-picture {
