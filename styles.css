@@ -20,6 +20,12 @@ body {
     text-transform: uppercase;
 }
 
+#header-para {
+    font-family: var(--gugi-fam);
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
 #status-section {
     display: flex;
     flex-flow:row wrap;
