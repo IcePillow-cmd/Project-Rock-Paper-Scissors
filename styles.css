@@ -51,3 +51,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.profile-picture {
+    max-width: 150px;
+}
