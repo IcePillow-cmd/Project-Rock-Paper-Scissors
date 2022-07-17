@@ -91,6 +91,11 @@ body {
     justify-content: center;
 }
 
+.selection-btn {
+    font-size: 80px;
+    padding: 20px;
+}
+
 #response-section {
     display: flex;
     flex-flow: column nowrap;
