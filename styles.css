@@ -73,6 +73,10 @@ body {
     text-transform: uppercase;
 }
 
+#round-tracker::before {
+    content: "ROUND: ";
+}
+
 #selection-section {
     display: flex;
     flex-flow: row wrap;
