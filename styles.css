@@ -73,6 +73,12 @@ body {
     text-transform: uppercase;
 }
 
+#round-tracker {
+    font-family: var(--gugi-fam);
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
 #round-tracker::before {
     content: "ROUND: ";
 }
