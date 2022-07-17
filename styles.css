@@ -97,6 +97,14 @@ body {
     padding: 20px;
 }
 
+#rock-icon,
+#paper-icon {
+    transform: rotate(90deg);
+}
+
+#scissors-icon {
+    transform: rotate(180deg) scaleY(-1);
+}
 #response-section {
     display: flex;
     flex-flow: column nowrap;
