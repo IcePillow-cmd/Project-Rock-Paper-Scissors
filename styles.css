@@ -78,6 +78,7 @@ body {
     font-family: var(--gugi-fam);
     font-size: 35px;
     text-transform: uppercase;
+    margin: 20px 0px;
 }
 
 #round-tracker::before {
