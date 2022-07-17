@@ -67,6 +67,12 @@ body {
     margin: 0 0 10px 0;
 }
 
+#versus-status {
+    font-family: var(--bungee-fam);
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
 #selection-section {
     display: flex;
     flex-flow: row wrap;
