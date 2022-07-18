@@ -118,8 +118,9 @@ body {
 #computer-response {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    width: 100%;
 }
 
 #comres-reaction {
