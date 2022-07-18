@@ -112,3 +112,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#computer-response {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
