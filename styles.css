@@ -115,6 +115,10 @@ body {
     margin: auto;
 }
 
+#round-response {
+    margin: 15px;
+}
+
 #computer-response {
     display: flex;
     flex-flow: row nowrap;
