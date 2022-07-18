@@ -126,3 +126,7 @@ body {
 #comres-reaction {
     max-width: 120px;
 }
+
+#comres-text {
+    margin: 0px 25px;
+}
