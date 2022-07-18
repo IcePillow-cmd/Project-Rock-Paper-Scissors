@@ -135,4 +135,6 @@ body {
 
 #comres-text {
     margin: 0px 25px;
+    font-size: 25px;
+    font-family: var(--roboto-fam);
 }
