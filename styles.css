@@ -18,6 +18,7 @@ body {
     background-color: rgba(0,0,0,0.4);
     border: 5px solid white;
     box-shadow: 0px 4px 8px white;
+    border-radius: 0 0 10px 10px;
 }
 
 #header-headings {
