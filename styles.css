@@ -83,6 +83,7 @@ body {
     width: 100%;
     background-color: white;
     padding: 5px;
+    border-radius: 10px;
 }
 
 #player-score,
