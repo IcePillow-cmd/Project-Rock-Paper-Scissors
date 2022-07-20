@@ -51,6 +51,9 @@ body {
     align-items: center;
     text-align: center;
     margin: 30px 0px;
+    background-color: rgba(0,0,0,0.4);
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 .profile-status {
