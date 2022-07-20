@@ -107,6 +107,7 @@ body {
     margin: 20px 0px;
     background-color: white;
     padding: 5px;
+    border-radius: 10px;
 }
 
 #round-tracker::before {
