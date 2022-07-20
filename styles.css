@@ -89,6 +89,7 @@ body {
 #player-score,
 #computer-score {
     margin: 0 0 10px 0;
+    color: white;
 }
 
 #versus-status {
