@@ -125,6 +125,7 @@ body {
 .selection-btn {
     font-size: 80px;
     padding: 20px;
+    border: none;
 }
 
 #rock-icon,
