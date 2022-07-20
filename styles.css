@@ -34,6 +34,8 @@ body {
     font-family: var(--gugi-fam);
     font-size: 35px;
     text-transform: capitalize;
+    color: white;
+    text-decoration: underline;
 }
 
 #header-headings,
