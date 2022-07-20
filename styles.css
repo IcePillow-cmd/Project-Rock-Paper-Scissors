@@ -74,6 +74,10 @@ body {
     max-height: 140px;
 }
 
+#player-picture {
+    filter: invert(1);
+}
+
 .profile-name {
     margin: 10px 0 10px 0;
     width: 100%;
