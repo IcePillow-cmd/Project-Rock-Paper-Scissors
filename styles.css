@@ -177,6 +177,7 @@ body {
 
 #comres-text {
     margin: 0px 25px;
-    font-size: 25px;
+    font-size: 30px;
     font-family: var(--roboto-fam);
+    color: white;
 }
