@@ -97,14 +97,11 @@ for (const playerBtn of playerBtnArr){
     playerBtn.addEventListener("click", () => {
         const playerNum = parseInt(playerScore.textContent);
         const computerNum = parseInt(computerScore.textContent);
-        const gameEnd = checkGame(playerNum, computerNum);
-        if (gameEnd) {
-            return
-        }
         const playerSelection = playerBtn.getAttribute("data-selection");
         const computerSelection = computerPlay();
         const roundResult = playRound(playerSelection, computerSelection);
         updateScore(roundResult, playerNum, computerNum);
+        const gameEnd = checkGame(playerNum, computerNum);
         updateRound();
     })
 }
