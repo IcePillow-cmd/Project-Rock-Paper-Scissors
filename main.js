@@ -78,14 +78,19 @@ function updateRound() {
 }
 
 function checkGame(playerNum, computerNum) {
+    if (!(playerNum >= 5 || computerNum >= 5)) {
+        return false
+    }
+    
     if (playerNum >= 5) {
         alert("You win");
         return true
-    } else if (computerNum >= 5) {
+    } 
+    
+    if (computerNum >= 5) {
         alert("You lose");
         return true
     }
-    return false
 }
 
 for (const playerBtn of playerBtnArr){
