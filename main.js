@@ -62,13 +62,21 @@ function playRound(playerSelection, computerSelection) {
 
 function updateScore(roundResult, playerNum, computerNum) {
     if (roundResult === "tie") {
-        return
+        return {
+            player: playerNum,
+            computer: computerNum
+        }
     } else if (roundResult === "player") {
         playerNum++
         playerScore.textContent = playerNum;
     } else if (roundResult === "computer") {
         computerNum++
         computerScore.textContent = computerNum;
+    }
+    
+    return {
+        player: playerNum,
+        computer: computerNum
     }
 }
 
@@ -100,8 +108,8 @@ for (const playerBtn of playerBtnArr){
         const playerSelection = playerBtn.getAttribute("data-selection");
         const computerSelection = computerPlay();
         const roundResult = playRound(playerSelection, computerSelection);
-        updateScore(roundResult, playerNum, computerNum);
-        const gameEnd = checkGame(playerNum, computerNum);
+        const roundScore = updateScore(roundResult, playerNum, computerNum);
+        const gameEnd = checkGame(roundScore.player, roundScore.computer);
         updateRound();
     })
 }
