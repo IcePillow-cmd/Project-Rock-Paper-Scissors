@@ -95,8 +95,8 @@ function checkGame(playerNum, computerNum) {
 
 for (const playerBtn of playerBtnArr){
     playerBtn.addEventListener("click", () => {
-        let playerNum = parseInt(playerScore.textContent);
-        let computerNum = parseInt(computerScore.textContent);
+        const playerNum = parseInt(playerScore.textContent);
+        const computerNum = parseInt(computerScore.textContent);
         const gameEnd = checkGame(playerNum, computerNum);
         if (gameEnd) {
             return
