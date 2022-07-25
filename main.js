@@ -85,11 +85,23 @@ function updateRound() {
     roundTracker.textContent = ++roundNum;
 }
 
+function endGame() {
+    const main = document.querySelector("#main");
+    const selectionSect = document.querySelector("#selection-section");
+    selectionSect.style.display = "none";
+
+    const resultSect = document.createElement("section");
+    const restartBtn = document.createElement("button");
+    restartBtn.textContent = "Play Again";
+    resultSect.appendChild(restartBtn);
+    main.insertBefore(resultSect, selectionSect);
+}
+
 function checkGame(playerNum, computerNum) {
     if (!(playerNum >= 5 || computerNum >= 5)) {
         return false
     } else {
-        
+        endGame();
     }
 }
 
