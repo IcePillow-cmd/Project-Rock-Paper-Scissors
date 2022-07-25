@@ -99,6 +99,29 @@ function endGame() {
     main.insertBefore(resultSect, selectionSect);
 }
 
+function showResult(playerNum, computerNum) {
+    const resultSect = document.querySelector("#result-section");
+    
+    const resultCon = document.createElement("div");
+    const resultImg = document.createElement("img");
+    const resultPara = document.createElement("p");
+    resultCon.setAttribute("id", "result-con");
+    resultImg.setAttribute("id", "result-img");
+    resultPara.setAttribute("id", "result-para");
+
+    if (playerNum > computerNum) {
+        resultImg.setAttribute("src", "images/player.png")
+        resultPara.textContent = "Status: Armstrong Defeated! Your not sussy anymore!"
+    } else {
+        resultImg.setAttribute("src", "images/armstrong-win.png")
+        resultPara.textContent = "Status: You are defeated! Can't resist the sussiness"
+    }
+
+    resultCon.appendChild(resultImg);
+    resultCon.appendChild(resultPara);
+    resultSect.prepend(resultCon);
+}
+
 function checkGame(playerNum, computerNum) {
     if (!(playerNum >= 5 || computerNum >= 5)) {
         return false
