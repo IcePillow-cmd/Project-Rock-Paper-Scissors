@@ -88,16 +88,8 @@ function updateRound() {
 function checkGame(playerNum, computerNum) {
     if (!(playerNum >= 5 || computerNum >= 5)) {
         return false
-    }
-    
-    if (playerNum >= 5) {
-        alert("You win");
-        return true
-    } 
-    
-    if (computerNum >= 5) {
-        alert("You lose");
-        return true
+    } else {
+        
     }
 }
 
