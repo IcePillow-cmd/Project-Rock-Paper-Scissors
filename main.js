@@ -1,3 +1,4 @@
+const main = document.querySelector("#main");
 const playerBtns = document.querySelectorAll(".selection-btn");
 const playerBtnArr = [...playerBtns];
 const roundResponse = document.querySelector("#round-response");
@@ -85,8 +86,15 @@ function updateRound() {
     roundTracker.textContent = ++roundNum;
 }
 
+function restartGame() {
+    const resultSect = document.querySelector("#result-section");
+    const selectionSect = document.querySelector("#selection-section");
+    main.removeChild(resultSect);
+    selectionSect.style.display = "flex";
+    
+}
+
 function endGame() {
-    const main = document.querySelector("#main");
     const selectionSect = document.querySelector("#selection-section");
     selectionSect.style.display = "none";
 
