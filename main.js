@@ -92,6 +92,8 @@ function endGame() {
 
     const resultSect = document.createElement("section");
     const restartBtn = document.createElement("button");
+    resultSect.setAttribute("id", "result-section");
+    restartBtn.setAttribute("id", "restart-btn");
     restartBtn.textContent = "Play Again";
     resultSect.appendChild(restartBtn);
     main.insertBefore(resultSect, selectionSect);
