@@ -91,7 +91,7 @@ function restartGame() {
     const selectionSect = document.querySelector("#selection-section");
     main.removeChild(resultSect);
     selectionSect.style.display = "flex";
-    
+
 }
 
 function endGame() {
@@ -103,6 +103,7 @@ function endGame() {
     resultSect.setAttribute("id", "result-section");
     restartBtn.setAttribute("id", "restart-btn");
     restartBtn.textContent = "Play Again";
+    restartBtn.addEventListener("click", restartGame);
     resultSect.appendChild(restartBtn);
     main.insertBefore(resultSect, selectionSect);
 }
