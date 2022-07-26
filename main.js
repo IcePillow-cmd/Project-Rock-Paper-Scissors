@@ -91,7 +91,10 @@ function restartGame() {
     const selectionSect = document.querySelector("#selection-section");
     main.removeChild(resultSect);
     selectionSect.style.display = "flex";
-
+    playerScore.textContent = "0";
+    computerScore.textContent = "0";
+    roundTracker.textContent = "1";
+    roundResponse.textContent = "Jack refused to give up! Choose your weapon"; 
 }
 
 function endGame() {
