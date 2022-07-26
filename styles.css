@@ -183,6 +183,18 @@ body {
     color: white;
 }
 
+#result-section {
+    display: flex;
+    flex-flow: column nowrap;
+    border: 5px solid white;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 50%;
+}
+
 #restart-btn {
     max-width: 350px;
     font-size: 35px;
