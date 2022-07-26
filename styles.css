@@ -214,3 +214,11 @@ body {
     max-width: 180px;
     max-height: 140px;
 }
+
+#result-para {
+    font-family: var(--gugi-fam);
+    font-size: 30px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: underline;
+}
