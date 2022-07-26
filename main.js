@@ -67,6 +67,36 @@ function playRound(playerSelection, computerSelection) {
     }
 } 
 
+function updateComResponse(roundResult, playerSelection, computerSelection) {
+    const winTextList = [
+        "What?",
+        "Slippery Little Bastard!",
+        `Making the mother of all ${computerSelection} here, Jack. Can't fret over every finger`,
+        "Okay, Now I'm mad.",
+        "That's the best you got?",
+        "That one hurt!",
+        "Let's see how long you can keep up"
+    ]
+    
+    const loseTextList = [
+        "Played Rochambeau, ya know. Coulda gone pro if I hadn't joined the navy.",
+        "Try University of Texas. I'm not one of those beltway pansies.",
+        "Don't f*ck with this senator!",
+        `Nice ${playerSelection}!`,
+        "F*ck man of cultures. F*ck the sussy. F*ck all of it!",
+        "I'll rid this world of pointless sus, Jack",
+        `Nano${computerSelection} Son! It strengthens in response to ${playerSelection} trauma. You can't hurt me Jack`
+    ]
+
+    const tieTextList = [
+        "I don't have time for this",
+        "C'mon, Jack!",
+        `${playerSelection}-to-${computerSelection}, I can't be beat. C'mon!`,
+        "...",
+        "That aint gonna work"
+    ]
+}
+
 function updateScore(roundResult, playerNum, computerNum) {
     if (roundResult === "tie") {
         return {
