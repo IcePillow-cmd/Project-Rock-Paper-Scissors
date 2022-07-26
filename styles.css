@@ -209,3 +209,8 @@ body {
 #restart-btn:active {
     transform: scale(1.1);
 }
+
+#result-img {
+    max-width: 180px;
+    max-height: 140px;
+}
