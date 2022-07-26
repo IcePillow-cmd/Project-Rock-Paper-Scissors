@@ -8,12 +8,6 @@ const roundTracker = document.querySelector("#round-tracker");
 const resReaction = document.querySelector("#comres-reaction");
 const resText = document.querySelector("#comres-text");
 
-function capitalizeStr(string) {
-    const firstCaps = string[0].toUpperCase();
-    const restLower = string.slice(1).toLowerCase();
-    return firstCaps + restLower;
-}
-
 function getRandomItm(array) {
     return array[Math.floor(Math.random()*array.length)];
 }
