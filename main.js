@@ -191,7 +191,7 @@ for (const playerBtn of playerBtnArr){
         const roundResult = playRound(playerSelection, computerSelection);
         const roundScore = updateScore(roundResult, playerNum, computerNum);
         updateComResponse(roundResult, playerSelection, computerSelection);
-        const gameEnd = checkGame(roundScore.player, roundScore.computer);
+        checkGame(roundScore.player, roundScore.computer);
         updateRound();
     })
 }
