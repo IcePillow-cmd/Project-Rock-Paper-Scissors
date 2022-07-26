@@ -67,7 +67,7 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
         "Okay, Now I'm mad.",
         "That's the best you got?",
         "That one hurt!",
-        "Let's see how long you can keep up"
+        "That aint gonna work"
     ]
     
     const loseResList = [
@@ -85,7 +85,7 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
         "C'mon, Jack!",
         `${playerSelection}-to-${computerSelection}, I can't be beat. C'mon!`,
         "...",
-        "That aint gonna work"
+        "Let's see how long you can keep up"
     ]
 
     if (roundResult === "player") {
