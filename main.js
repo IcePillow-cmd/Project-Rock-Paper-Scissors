@@ -5,6 +5,8 @@ const roundResponse = document.querySelector("#round-response");
 const playerScore = document.querySelector("#player-score");
 const computerScore = document.querySelector("#computer-score");
 const roundTracker = document.querySelector("#round-tracker");
+const resReaction = document.querySelector("#comres-reaction");
+const resText = document.querySelector("#comres-text");
 
 function capitalizeStr(string) {
     const firstCaps = string[0].toUpperCase();
