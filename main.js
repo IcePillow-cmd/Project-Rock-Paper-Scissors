@@ -97,10 +97,13 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
     ]
 
     if (roundResult === "player") {
+        resReaction.src = "images/armstrong-lose.png";
         resText.textContent = getRandomItm(winResList);
     } else if (roundResult === "computer") {
+        resReaction.src = "images/armstrong-win.png";
         resText.textContent = getRandomItm(loseResList);
     } else {
+        resReaction.src = "images/armstrong-base.png";
         resText.textContent = getRandomItm(tieResList);
     }
 }
