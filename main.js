@@ -24,13 +24,11 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    const playerStr = capitalizeStr(playerSelection);
+    const winResult = `+1 for Player, ${playerSelection} beats ${computerSelection}`;
+    const loseResult = `+1 for Challenger, ${computerSelection} beats ${playerSelection}`;
+    const tieResult = `You and Challenger both chose ${playerSelection}`;
 
-    const winResult = `+1 for Player, ${playerStr} beats ${computerSelection}`;
-    const loseResult = `+1 for Challenger, ${computerSelection} beats ${playerStr}`;
-    const tieResult = `You and Challenger both chose ${playerStr}`;
-
-    if (playerStr === "Rock") {
+    if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
             roundResponse.textContent = winResult;
             return "player"
@@ -42,7 +40,7 @@ function playRound(playerSelection, computerSelection) {
             roundResponse.textContent = tieResult;
             return "tie"
         }
-    } else if (playerStr === "Paper") {
+    } else if (playerSelection === "Paper") {
         if (computerSelection === "Rock") {
             roundResponse.textContent = winResult;
             return "player"
@@ -53,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
             roundResponse.textContent = tieResult;
             return "tie"
         }
-    } else if (playerStr === "Scissors") {
+    } else if (playerSelection === "Scissors") {
         if (computerSelection === "Paper") {
             roundResponse.textContent = winResult;
             return "player"
