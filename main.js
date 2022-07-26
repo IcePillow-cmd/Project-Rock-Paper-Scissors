@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection) {
 } 
 
 function updateComResponse(roundResult, playerSelection, computerSelection) {
-    const winTextList = [
+    const winResList = [
         "What?",
         "Slippery Little Bastard!",
         `Making the mother of all ${computerSelection} here, Jack. Can't fret over every finger`,
@@ -78,7 +78,7 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
         "Let's see how long you can keep up"
     ]
     
-    const loseTextList = [
+    const loseResList = [
         "Played Rochambeau, ya know. Coulda gone pro if I hadn't joined the navy.",
         "Try University of Texas. I'm not one of those beltway pansies.",
         "Don't f*ck with this senator!",
@@ -88,13 +88,21 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
         `Nano${computerSelection} Son! It strengthens in response to ${playerSelection} trauma. You can't hurt me Jack`
     ]
 
-    const tieTextList = [
+    const tieResList = [
         "I don't have time for this",
         "C'mon, Jack!",
         `${playerSelection}-to-${computerSelection}, I can't be beat. C'mon!`,
         "...",
         "That aint gonna work"
     ]
+
+    if (roundResult === "player") {
+        resText.textContent = getRandomItm(winResList);
+    } else if (roundResult === "computer") {
+        resText.textContent = getRandomItm(loseResList);
+    } else {
+        resText.textContent = getRandomItm(tieResList);
+    }
 }
 
 function updateScore(roundResult, playerNum, computerNum) {
