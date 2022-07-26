@@ -100,6 +100,22 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
     }
 }
 
+function showRoundWinner(roundResult) {
+    const playerStat = document.querySelector("#player-status");
+    const computerStat = document.querySelector("#computer-status");
+
+    if (roundResult === "player") {
+        playerStat.style.boxShadow = "0px 10px 20px white";
+        computerStat.style.boxShadow = "none";
+    } else if (roundResult === "computer") {
+        playerStat.style.boxShadow = "none";
+        computerStat.style.boxShadow = "0px 10px 20px white";
+    } else {
+        playerStat.style.boxShadow = "none";
+        computerStat.style.boxShadow = "none";
+    }
+}
+
 function updateScore(roundResult, playerNum, computerNum) {
     if (roundResult === "tie") {
         return {
