@@ -192,3 +192,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+
+#restart-btn:active {
+    transform: scale(1.1);
+}
