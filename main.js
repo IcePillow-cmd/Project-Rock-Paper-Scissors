@@ -18,9 +18,9 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    const winResult = `+1 for Player, ${playerSelection} beats ${computerSelection}`;
-    const loseResult = `+1 for Challenger, ${computerSelection} beats ${playerSelection}`;
-    const tieResult = `You and Challenger both chose ${playerSelection}`;
+    const winResult = `+1 for Jack, ${playerSelection} beats ${computerSelection}`;
+    const loseResult = `+1 for Armstrong, ${computerSelection} beats ${playerSelection}`;
+    const tieResult = `Both players chose ${playerSelection}, No points earned!`;
 
     if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
