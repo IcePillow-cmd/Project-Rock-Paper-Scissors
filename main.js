@@ -128,12 +128,20 @@ function updateRound() {
 function restartGame() {
     const resultSect = document.querySelector("#result-section");
     const selectionSect = document.querySelector("#selection-section");
+    const restartResText = [
+        "Let's Go!",
+        "Come on!",
+        "Ready or not Jack, Here we go!",
+        "I like you Jack so I'm giving you another shot."
+    ]
     main.removeChild(resultSect);
     selectionSect.style.display = "flex";
     playerScore.textContent = "0";
     computerScore.textContent = "0";
     roundTracker.textContent = "1";
     roundResponse.textContent = "Jack refused to give up! Choose your weapon"; 
+    resText.textContent = getRandomItm(restartResText);
+    resReaction.src = "images/armstrong-base.png";
 }
 
 function endGame() {
