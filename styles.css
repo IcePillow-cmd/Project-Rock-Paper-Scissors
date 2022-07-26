@@ -184,6 +184,7 @@ body {
 }
 
 #restart-btn {
+    max-width: 350px;
     font-size: 35px;
     font-family: var(--bungee-fam);
     padding: 20px;
