@@ -63,7 +63,7 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
     const winResList = [
         "What?",
         "Slippery Little Bastard!",
-        `Making the Mother of all ${computerSelection} here, Jack. Can't fret over every finger`,
+        `Making the Mother of all ${computerSelection} here, Jack. Can't fret over every ${playerSelection}`,
         "Okay, Now I'm mad.",
         "That's the best you got?",
         "That one hurt!",
