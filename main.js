@@ -75,7 +75,7 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
         "Try University of Texas. I'm not one of those beltway pansies.",
         "Don't f*ck with this senator!",
         `Nice ${playerSelection}!`,
-        "F*ck man of cultures. F*ck the sussy. F*ck all of it!",
+        "F*ck the self entitled man of cultures. F*ck the sussy bakas. F*ck all of it!",
         "I'll rid this world of pointless sus, Jack",
         `Nano${computerSelection} Son! It strengthens in response to ${playerSelection} trauma. You can't hurt me Jack`
     ]
