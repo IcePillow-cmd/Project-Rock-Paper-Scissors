@@ -136,6 +136,7 @@ function checkGame(playerNum, computerNum) {
         return false
     } else {
         endGame();
+        showResult(playerNum, computerNum);
     }
 }
 
