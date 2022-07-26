@@ -119,10 +119,10 @@ function showResult(playerNum, computerNum) {
     resultPara.setAttribute("id", "result-para");
 
     if (playerNum > computerNum) {
-        resultImg.setAttribute("src", "images/player.png")
+        resultImg.setAttribute("src", "images/armstrong-win.png")
         resultPara.textContent = "Status: Armstrong Defeated! Your not sussy anymore!"
     } else {
-        resultImg.setAttribute("src", "images/armstrong-win.png")
+        resultImg.setAttribute("src", "images/armstrong-lose.png")
         resultPara.textContent = "Status: You are defeated! Can't resist the sussiness"
     }
 
