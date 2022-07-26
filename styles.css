@@ -222,6 +222,8 @@ body {
 #result-img {
     max-width: 180px;
     max-height: 140px;
+    filter: invert(1) sepia(1);
+    border-radius: 20px;
 }
 
 #result-para {
