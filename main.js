@@ -214,6 +214,7 @@ for (const playerBtn of playerBtnArr){
         const computerSelection = computerPlay();
         const roundResult = playRound(playerSelection, computerSelection);
         const roundScore = updateScore(roundResult, playerNum, computerNum);
+        showRoundWinner(roundResult);
         updateComResponse(roundResult, playerSelection, computerSelection);
         checkGame(roundScore.player, roundScore.computer);
         updateRound();
