@@ -13,8 +13,8 @@ function getRandomItm(array) {
 }
 
 function computerPlay() {
-    const CHOICE = ["Rock", "Paper", "Scissors"];
-    return CHOICE[Math.floor(Math.random() * CHOICE.length)];
+    const choice = ["Rock", "Paper", "Scissors"];
+    return choice[Math.floor(Math.random() * choice.length)];
 }
 
 function playRound(playerSelection, computerSelection) {
