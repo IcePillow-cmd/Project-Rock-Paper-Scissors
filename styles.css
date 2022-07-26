@@ -186,13 +186,11 @@ body {
 #result-section {
     display: flex;
     flex-flow: column nowrap;
-    border: 5px solid white;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    padding: 25px;
     margin: 30px auto;
-    max-width: 50%;
+    max-width: 80%;
 }
 
 #restart-btn {
