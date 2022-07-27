@@ -149,6 +149,11 @@ function restartGame() {
         "Ready or not Jack, Here we go!",
         "I like you Jack so I'm giving you another shot."
     ]
+    const bgImages = [
+        "url(images/bg-mgrWarScene.png)",
+        "url(images/bg-mgrArmory.png)",
+        "url(images/bg-mgrLab.png)"
+    ]
     main.removeChild(resultSect);
     selectionSect.style.display = "flex";
     playerScore.textContent = "0";
@@ -159,6 +164,7 @@ function restartGame() {
     roundResponse.textContent = "Jack refused to give up! Choose your weapon"; 
     resText.textContent = getRandomItm(restartResText);
     resReaction.src = "images/armstrong-base.png";
+    document.body.style.backgroundImage = getRandomItm(bgImages);
 }
 
 function endGame() {
