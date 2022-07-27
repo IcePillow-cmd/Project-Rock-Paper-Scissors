@@ -256,3 +256,7 @@ body {
     display: flex;
     flex-flow: row nowrap;
 }
+
+.footer-credits {
+    margin: 0;
+}
