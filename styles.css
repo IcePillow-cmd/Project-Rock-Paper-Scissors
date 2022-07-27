@@ -284,3 +284,9 @@ body {
 .footer-link:hover {
     font-size: 20px;
 }
+
+.footer-link:active {
+    filter: sepia(1);
+    box-shadow: 0px 4px 8px white;
+    transition-duration: 0s;
+}
