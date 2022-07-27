@@ -270,3 +270,10 @@ body {
     font-family: var(--roboto-fam);
     font-size: 15px;
 }
+
+.footer-link {
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
