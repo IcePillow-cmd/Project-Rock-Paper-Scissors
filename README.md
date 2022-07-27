@@ -1,1 +1,4 @@
 # Project-Rock-Paper-Scissors
+
+## Description
+**Rock Paper Scissors: Status** is a [MGR:REVENGEANCE](https://metalgear.fandom.com/wiki/Metal_Gear_Rising:_Revengeance) themed rock, paper, scissors game that features the player as [Jack](https://metalgear.fandom.com/wiki/Raiden) which is the main protagonist of MGR:REVENGEANCE to fight his [Sussiness](https://knowyourmeme.com/memes/sus-among-us) to defeat [Senator Armstrong](https://metalgear.fandom.com/wiki/Steven_Armstrong) once and for all. The idea of the game is inspired as seen in the title from the [Revengeance Status]() memes which tricks the viewer from a suggestive video just to switch from a clip of armstrong's/jetstream sam's iconic moments from the game. The mechanics of the game is simple, the player must pick over rock paper and scissors to fight senator armstrong and the one who got to 5 points first wins. 
