@@ -7,6 +7,8 @@ const computerScore = document.querySelector("#computer-score");
 const roundTracker = document.querySelector("#round-tracker");
 const resReaction = document.querySelector("#comres-reaction");
 const resText = document.querySelector("#comres-text");
+const playerStat = document.querySelector("#player-status");
+const computerStat = document.querySelector("#computer-status");
 
 function getRandomItm(array) {
     return array[Math.floor(Math.random()*array.length)];
@@ -101,9 +103,6 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
 }
 
 function showRoundWinner(roundResult) {
-    const playerStat = document.querySelector("#player-status");
-    const computerStat = document.querySelector("#computer-status");
-
     if (roundResult === "player") {
         playerStat.style.boxShadow = "0px 10px 20px white";
         computerStat.style.boxShadow = "none";
