@@ -154,6 +154,8 @@ function restartGame() {
     playerScore.textContent = "0";
     computerScore.textContent = "0";
     roundTracker.textContent = "1";
+    playerStat.style.boxShadow = "none";
+    computerStat.style.boxShadow = "none";
     roundResponse.textContent = "Jack refused to give up! Choose your weapon"; 
     resText.textContent = getRandomItm(restartResText);
     resReaction.src = "images/armstrong-base.png";
