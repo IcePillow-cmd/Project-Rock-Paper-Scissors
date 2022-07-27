@@ -250,7 +250,7 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     padding: 20px 0px;
     margin-top: 60px;
     background-color: rgba(0,0,0,0.4);
