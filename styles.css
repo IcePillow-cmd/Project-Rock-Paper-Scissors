@@ -244,3 +244,8 @@ body {
     text-decoration: underline;
     margin: 15px;
 }
+
+.footer-div {
+    display: flex;
+    flex-flow: row nowrap;
+}
