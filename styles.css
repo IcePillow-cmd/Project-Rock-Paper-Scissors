@@ -251,6 +251,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    padding: 20px 0px;
+    margin-top: 60px;
 }
 
 .footer-div {
