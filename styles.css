@@ -255,6 +255,7 @@ body {
 .footer-div {
     display: flex;
     flex-flow: row nowrap;
+    gap: 10px;
 }
 
 .footer-credits {
