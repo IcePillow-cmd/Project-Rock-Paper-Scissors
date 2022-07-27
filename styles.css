@@ -278,4 +278,9 @@ body {
     background-color: white;
     padding: 5px;
     border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+.footer-link:hover {
+    font-size: 20px;
 }
