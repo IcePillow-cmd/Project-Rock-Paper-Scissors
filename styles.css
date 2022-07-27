@@ -266,4 +266,7 @@ body {
 
 .footer-credits {
     margin: 0;
+    color: white;
+    font-family: var(--roboto-fam);
+    font-size: 15px;
 }
