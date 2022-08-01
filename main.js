@@ -18,42 +18,26 @@ function computerPlay() {
     const choice = ["Rock", "Paper", "Scissors"];
     return choice[Math.floor(Math.random() * choice.length)];
 }
-
+function mutateResponse() {}
 function playRound(playerSelection, computerSelection) {
     const winResult = `+1 for Jack, ${playerSelection} beats ${computerSelection}`;
     const loseResult = `+1 for Armstrong, ${computerSelection} beats ${playerSelection}`;
     const tieResult = `Both players chose ${playerSelection}, No points earned!`;
+
+    if (
+        (playerSelection === "Rock" && computerSelection === "Scissors") ||
+        (playerSelection === "Paper" && computerSelection === "Rock") ||
+        (playerSelection === "Scissors" && computerSelection === "Paper")
+    ) {
+        roundResponse.textContent = winResult;
+        return "player";
+    }
     if (playerSelection === computerSelection) {
         roundResponse.textContent = tieResult;
         return "tie";
     }
-    if (playerSelection === "Rock") {
-        if (computerSelection === "Paper") {
-            roundResponse.textContent = loseResult;
-            return "lose";
-        } else {
-            roundResponse.textContent = winResult;
-            return "win";
-        }
-    }
-    if (playerSelection === "Paper") {
-        if (computerSelection === "Rock") {
-            roundResponse.textContent = winResult;
-            return "player";
-        } else if (computerSelection === "Scissors") {
-            roundResponse.textContent = loseResult;
-            return "computer";
-        }
-    }
-    if (playerSelection === "Scissors") {
-        if (computerSelection === "Paper") {
-            roundResponse.textContent = winResult;
-            return "player";
-        } else if (computerSelection === "Rock") {
-            roundResponse.textContent = loseResult;
-            return "computer";
-        }
-    }
+    roundResponse.textContent = loseResult;
+    return "computer";
 }
 
 function updateComResponse(roundResult, playerSelection, computerSelection) {
@@ -98,15 +82,19 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
 }
 
 function showRoundWinner(roundResult) {
-    if (roundResult === "player") {
-        playerStat.style.boxShadow = "0px 10px 20px white";
-        computerStat.style.boxShadow = "none";
-    } else if (roundResult === "computer") {
-        playerStat.style.boxShadow = "none";
-        computerStat.style.boxShadow = "0px 10px 20px white";
-    } else {
-        playerStat.style.boxShadow = "none";
-        computerStat.style.boxShadow = "none";
+    switch (roundResult) {
+        case "player": {
+            playerStat.style.boxShadow = "0px 10px 20px white";
+            computerStat.style.boxShadow = "none";
+        }
+        case "computer": {
+            computerStat.style.boxShadow = "0px 10px 20px white";
+            playerStat.style.boxShadow = "none";
+        }
+        case "tie": {
+            playerStat.style.boxShadow = "none";
+            computerStat.style.boxShadow = "none";
+        }
     }
 }
 
