@@ -18,7 +18,10 @@ function computerPlay() {
     const choice = ["Rock", "Paper", "Scissors"];
     return choice[Math.floor(Math.random() * choice.length)];
 }
-function mutateResponse() {}
+function setReturn(textContent, playRoundResult) {
+    roundResponse.textContent = textContent;
+    return playRoundResult;
+}
 function playRound(playerSelection, computerSelection) {
     const winResult = `+1 for Jack, ${playerSelection} beats ${computerSelection}`;
     const loseResult = `+1 for Armstrong, ${computerSelection} beats ${playerSelection}`;
@@ -29,15 +32,12 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === "Paper" && computerSelection === "Rock") ||
         (playerSelection === "Scissors" && computerSelection === "Paper")
     ) {
-        roundResponse.textContent = winResult;
-        return "player";
+        return setReturn(winResult, "player");
     }
     if (playerSelection === computerSelection) {
-        roundResponse.textContent = tieResult;
-        return "tie";
+        return setReturn(tieResult, "tie");
     }
-    roundResponse.textContent = loseResult;
-    return "computer";
+    return setReturn(loseResult, "computer");
 }
 
 function updateComResponse(roundResult, playerSelection, computerSelection) {
@@ -72,13 +72,16 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
     if (roundResult === "player") {
         resReaction.src = "images/armstrong-lose.png";
         resText.textContent = getRandomItm(winResList);
-    } else if (roundResult === "computer") {
+        return;
+    }
+    if (roundResult === "computer") {
         resReaction.src = "images/armstrong-win.png";
         resText.textContent = getRandomItm(loseResList);
-    } else {
-        resReaction.src = "images/armstrong-base.png";
-        resText.textContent = getRandomItm(tieResList);
+        return;
     }
+    resReaction.src = "images/armstrong-base.png";
+    resText.textContent = getRandomItm(tieResList);
+    return;
 }
 
 function showRoundWinner(roundResult) {
@@ -104,23 +107,31 @@ function updateScore(roundResult, playerNum, computerNum) {
             player: playerNum,
             computer: computerNum,
         };
-    } else if (roundResult === "player") {
-        playerNum++;
-        playerScore.textContent = playerNum;
-    } else if (roundResult === "computer") {
-        computerNum++;
-        computerScore.textContent = computerNum;
     }
 
     return {
-        player: playerNum,
-        computer: computerNum,
+        player:
+            roundResult === "player"
+                ? (() => {
+                      playerNum++;
+                      playerScore.textContent = playerNum;
+                      return playerNum;
+                  })()
+                : playerNum,
+        computer:
+            roundResult === "computer"
+                ? (() => {
+                      computerNum++;
+                      computerScore.textContent = computerNum;
+                      return computerNum;
+                  })()
+                : computerNum,
     };
 }
 
 function updateRound() {
     let roundNum = parseInt(roundTracker.textContent);
-    roundTracker.textContent = ++roundNum;
+    roundTracker.textContent = roundNum++;
 }
 
 function restartGame() {
@@ -192,10 +203,9 @@ function showResult(playerNum, computerNum) {
 function checkGame(playerNum, computerNum) {
     if (!(playerNum >= 5 || computerNum >= 5)) {
         return false;
-    } else {
-        endGame();
-        showResult(playerNum, computerNum);
     }
+    endGame();
+    showResult(playerNum, computerNum);
 }
 
 for (const playerBtn of playerBtnArr) {
