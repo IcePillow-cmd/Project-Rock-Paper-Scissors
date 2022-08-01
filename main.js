@@ -10,7 +10,7 @@ const resText = document.querySelector("#comres-text");
 const playerStat = document.querySelector("#player-status");
 const computerStat = document.querySelector("#computer-status");
 
-function getRandomItm(array) {
+function getRandomItem(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
@@ -18,6 +18,7 @@ function computerPlay() {
     const choice = ["Rock", "Paper", "Scissors"];
     return choice[Math.floor(Math.random() * choice.length)];
 }
+// this function updates the roundResponse and returns the argument playRoundSelection
 function setReturn(textContent, playRoundResult) {
     roundResponse.textContent = textContent;
     return playRoundResult;
@@ -26,7 +27,7 @@ function playRound(playerSelection, computerSelection) {
     const winResult = `+1 for Jack, ${playerSelection} beats ${computerSelection}`;
     const loseResult = `+1 for Armstrong, ${computerSelection} beats ${playerSelection}`;
     const tieResult = `Both players chose ${playerSelection}, No points earned!`;
-
+    // the if statement when they player is winning
     if (
         (playerSelection === "Rock" && computerSelection === "Scissors") ||
         (playerSelection === "Paper" && computerSelection === "Rock") ||
@@ -34,9 +35,11 @@ function playRound(playerSelection, computerSelection) {
     ) {
         return setReturn(winResult, "player");
     }
+    // the if statement when both players are tied
     if (playerSelection === computerSelection) {
         return setReturn(tieResult, "tie");
     }
+    // the statement when the computer is winning
     return setReturn(loseResult, "computer");
 }
 
@@ -71,16 +74,16 @@ function updateComResponse(roundResult, playerSelection, computerSelection) {
 
     if (roundResult === "player") {
         resReaction.src = "images/armstrong-lose.png";
-        resText.textContent = getRandomItm(winResList);
+        resText.textContent = getRandomItem(winResList);
         return;
     }
     if (roundResult === "computer") {
         resReaction.src = "images/armstrong-win.png";
-        resText.textContent = getRandomItm(loseResList);
+        resText.textContent = getRandomItem(loseResList);
         return;
     }
     resReaction.src = "images/armstrong-base.png";
-    resText.textContent = getRandomItm(tieResList);
+    resText.textContent = getRandomItem(tieResList);
     return;
 }
 
@@ -108,9 +111,10 @@ function updateScore(roundResult, playerNum, computerNum) {
             computer: computerNum,
         };
     }
-
+    // if they are not tied, the argument is mutated to update score
     return {
         player:
+            // the ternary operator is used to update the score of player
             roundResult === "player"
                 ? (() => {
                       playerNum++;
@@ -118,6 +122,7 @@ function updateScore(roundResult, playerNum, computerNum) {
                       return playerNum;
                   })()
                 : playerNum,
+        // the ternary operator is used to update the score of computer
         computer:
             roundResult === "computer"
                 ? (() => {
@@ -156,9 +161,9 @@ function restartGame() {
     playerStat.style.boxShadow = "none";
     computerStat.style.boxShadow = "none";
     roundResponse.textContent = "Jack refused to give up! Choose your weapon";
-    resText.textContent = getRandomItm(restartResText);
+    resText.textContent = getRandomItem(restartResText);
     resReaction.src = "images/armstrong-base.png";
-    document.body.style.backgroundImage = getRandomItm(bgImages);
+    document.body.style.backgroundImage = getRandomItem(bgImages);
 }
 
 function endGame() {
@@ -189,11 +194,12 @@ function showResult(playerNum, computerNum) {
         resultImg.setAttribute("src", "images/armstrong-win.png");
         resultPara.textContent =
             "Status: Armstrong Defeated! Your not sussy anymore!";
-    } else {
-        resultImg.setAttribute("src", "images/armstrong-lose.png");
-        resultPara.textContent =
-            "Status: You are defeated! Can't resist the sussiness";
+        return;
     }
+    // remove else statement because return statement guards the clause
+    resultImg.setAttribute("src", "images/armstrong-lose.png");
+    resultPara.textContent =
+        "Status: You are defeated! Can't resist the sussiness";
 
     resultCon.appendChild(resultImg);
     resultCon.appendChild(resultPara);
